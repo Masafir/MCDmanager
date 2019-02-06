@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MCDmanager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+<body>
+
+    <h1 class ="is-size-1" id="dbtitle">Créer un base</h1>
+    <div class="columns is-offset-8 ">
+       <nav>
+               <button class="button is-primary">add Table</button>
+               <button class="button is-primary">add relation</button>
+       </nav>
+    </div>
+   
+          <div class="modal " id="addDbModal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <form action="" method="POST" id="Db-create">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">Ajouter une Db</p>
+                            <button class="delete close" type="button" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <div class="field">
+                                <label class="label">Nom</label>
+                                <div class="control">
+                                    <input type="text" class="input" name="Db-name" placeholder="Nom de la Dbe">
+                                </div>
+                            </div>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button is-success">Save changes</button>
+                            <button class="button close" type="button">Cancel</button>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+
+           <!--  ----------- TODO --------- 
+                Ajouter une modal pour ajouter une table avec comme header =>
+                    
+                    input name
+                    slect type
+                    input size
+                    select default
+                    select interclassement
+                    select attribut
+                    checkbox null
+                    slect index
+                    checkbox ai
+                    input comment
+                    select virtuality
+
+                Ajouter un bouton d'ajout de ligne avant de valider
+
+                créer un template de table 
+
+            -->
+            
+
+   
+     <script src="node_modules/jquery/dist/jquery.min.js"></script> 
+    <script src="js/app.js"></script>
+
+</body>
+</html>
