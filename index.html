@@ -19,50 +19,154 @@
        </nav>
     </div>
    
-          <div class="modal " id="addDbModal">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <form action="" method="POST" id="Db-create">
-                        <header class="modal-card-head">
-                            <p class="modal-card-title">Ajouter une Db</p>
-                            <button class="delete close" type="button" aria-label="close"></button>
-                        </header>
-                        <section class="modal-card-body">
-                            <div class="field">
-                                <label class="label">Nom</label>
-                                <div class="control">
-                                    <input type="text" class="input" name="Db-name" placeholder="Nom de la Dbe">
-                                </div>
-                            </div>
-                        </section>
-                        <footer class="modal-card-foot">
-                            <button class="button is-success">Save changes</button>
-                            <button class="button close" type="button">Cancel</button>
-                        </footer>
-                    </form>
+    <!-- class="is-active" -->
+    <div class="modal " id="addDbModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <form action="" method="POST" id="Db-create">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Ajouter une Db</p>
+                    <button class="delete close" type="button" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label class="label">Nom</label>
+                        <div class="control">
+                            <input type="text" class="input" name="Db-name" placeholder="Nom de la Dbe">
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button close" type="button">Cancel</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    <!--  ----------- TODO --------- 
+        Ajouter une modal pour ajouter une table avec comme header =>
+            
+            input name
+            select type
+            input size
+            select default
+            select interclassement
+            select attribut
+            checkbox null
+            slect index
+            checkbox ai
+            input comment
+            select virtuality
+
+        Ajouter un bouton d'ajout de ligne avant de valider
+
+        créer un template de table 
+
+    -->
+
+    <div class="modal is-active" id="addTableModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <form action="" method="POST" id="Table-create">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Ajouter une Table</p>
+                    <button class="delete close" type="button" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                        <div class="field">    
+                    <label class="label">Nom</label>
+                        <div class="control">
+                            <input type="text" class="input" name="table-name" placeholder="Nom de la Table">
+                        </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Size/Value</th>
+                                <th>Default</th>
+                                <th>Inter</th>
+                                <th>Attributes</th>
+                                <th>Null</th>
+                                <th>Index</th>
+                                <th>Auto-Inc</th>
+                                <th>Comments</th>
+                                <th>Virtuality</th>
+                                <th>Stockage Motor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="row-1">
+                                <td>
+                                    <div class="input">
+                                        <input type="text" class="input-name" name="1-name">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select">
+                                        <select name="1-type" class="select-type">
+                                            <option value="INT">INT</option>
+                                            <option value="VARCHAR">VARCHAR</option>
+                                            <option value="TEXT">TEXT</option>
+                                            <option value="DATE">DATE</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input">
+                                    <input type="text" class="input-size" name="1-size">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select"> 
+                                        <select name="1-default" class="select-type">
+                                                <option value="Aucune">Aucune</option>
+                                                <option value="Tel Que Défini"><!-- <input type="text" class="input-size" name="1-size" placeholder="definisser le default"> --></option>
+                                                <option value="Null">null</option>
+                                                <option value="currentTimeStamps">currentTimeStamps</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select"> 
+                                        <select name="1-default" class="select-inter">
+                                                <option value="utf8">Aucune</option>
+                                                <option value="latin"><!-- <input type="text" class="input-size" name="1-size" placeholder="definisser le default"> --></option>
+                                                <option value="Null">null</option>
+                                                <option value="currentTimeStamps">currentTimeStamps</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                        <div class="select"> 
+                                                <select name="1-default" class="select-attribute">
+                                                        <option value="Aucune">Aucune</option>
+                                                        <option value="Tel Que Défini"><!-- <input type="text" class="input-size" name="1-size" placeholder="definisser le default"> --></option>
+                                                        <option value="Null">null</option>
+                                                        <option value="currentTimeStamps">currentTimeStamps</option>
+                                                </select>
+                                        </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
+                </section>
 
-           <!--  ----------- TODO --------- 
-                Ajouter une modal pour ajouter une table avec comme header =>
-                    
-                    input name
-                    slect type
-                    input size
-                    select default
-                    select interclassement
-                    select attribut
-                    checkbox null
-                    slect index
-                    checkbox ai
-                    input comment
-                    select virtuality
-
-                Ajouter un bouton d'ajout de ligne avant de valider
-
-                créer un template de table 
-
-            -->
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button close" type="button">Cancel</button>
+                </footer>
+            </form>
+        </div>
+    </div>
             
 
    
