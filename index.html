@@ -14,8 +14,8 @@
     <h1 class ="is-size-1" id="dbtitle">Créer un base</h1>
     <div class="columns is-offset-8 ">
        <nav>
-               <button class="button is-primary">add Table</button>
-               <button class="button is-primary">add relation</button>
+               <button class="button is-primary" id="addTableBtn">add Table</button>
+               <button class="button is-primary" id="addRelationBtn">add relation</button>
        </nav>
     </div>
    
@@ -65,7 +65,7 @@
 
     -->
 
-    <div class="modal is-active" id="addTableModal">
+    <div class="modal" id="addTableModal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <form action="" method="POST" id="Table-create">
@@ -148,7 +148,11 @@
                                                 </select>
                                         </div>
                                 </td>
-                                <td></td>
+                                <td>
+                                    <div class="field">
+                                        <input id="switchExample" type="checkbox" name="switchExample" class="switch is-info">
+                                    </div>
+                                </td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
